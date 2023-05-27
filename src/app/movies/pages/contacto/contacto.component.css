@@ -1,0 +1,17 @@
+label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    width: 300px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button:hover {
+    width: 325px;
+    color: #3d70cf;
+    background-color: #212529;
+}

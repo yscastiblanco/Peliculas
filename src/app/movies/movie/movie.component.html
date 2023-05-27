@@ -1,0 +1,25 @@
+
+<div class="row m-0 d-flex justify-content-center flex-wrap" >
+    
+        <div *ngFor="let pelicula of peliculasPopulares" class=" col-md-3 m-1 card h-80 m-3 text-center">
+            <div class="card-body">
+                <h2 class="card-title text-black-50">{{pelicula.title}}</h2>
+                
+                <img width="50%" src="https://image.tmdb.org/t/p/w500{{pelicula.poster_path}}" alt="{{pelicula.title}}">             
+                <p class="card-text">{{pelicula.overview.substring(0, 200)}}...</p>
+                <a class="btn btn-outline-success btn-sm mb-2" [routerLink]="['/pelicula']" [queryParams]="{idPelicula: pelicula.id}">Más detalles...</a>
+                
+                <div class="d-flex align-items-center justify-content-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">{{pelicula.release_date}}</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">{{pelicula.popularity}}</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">{{pelicula.vote_average}}</button> 
+                  </div>
+
+            </div>
+        </div>
+</div>  
+</div>
+<app-footer [currentPage]="currentPage" 
+            (siguientePagina)="siguientePagina()" 
+            (anteriorPagina)="anteriorPagina()"></app-footer>

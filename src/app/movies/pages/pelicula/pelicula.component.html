@@ -1,0 +1,22 @@
+
+  <h2 class="display-2 text-black-50 text-center fw-bold">
+    {{ pelicula.title}}
+  </h2>
+  <div class="container px-4 px-lg-5">
+    <div class="bg-dark bg-gradient row gx-4 gx-lg-5 align-items-center my-5">
+
+    <img src="https://image.tmdb.org/t/p/w500{{ pelicula.poster_path }}"/>
+    <p class="h4 text-light m-2">
+      {{ pelicula.overview }}
+  </p>
+  <h2 class="text-warning">Actores</h2>
+    <div class="breadcrumb col-9 m-auto mb-5">
+    <div class="actores">
+      <div *ngFor="let actor of actores" class="actor">
+        <img *ngIf="actor.profile_path" width="15%"  src="https://image.tmdb.org/t/p/w500{{ actor.profile_path }}" />
+        <p class="h5 text-light m-2">{{ actor.name }}</p>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
